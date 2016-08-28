@@ -1,0 +1,15 @@
+
+name: ansible-node-box
+version: 0.1.0
+inherits: wercker/nodejs
+type: main
+platform: ubuntu@12.04
+description: A Wercker Box with Ansible & NodeJS
+keyworkds:
+  - nodejs
+  - ansible
+script: |
+  sudo apt-get update
+  sudo apt-get install python-setuptools python-dev build-essential
+  sudo easy_intall pip
+  sudo pip install ansible boto boto3 paramiko
